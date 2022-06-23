@@ -10,6 +10,7 @@ public class HelloController {
     @GetMapping("hello") // Web app 에서 flush(?) hello 라고 들어오면 이 method를 호출
     public String hello(Model model) {
         model.addAttribute("data", "hello!!");  // {key, value} : {"data", "hello!!"}
-        return "hello";
+        return "hello"; // hello.html에 가서 렌더링을 하라는 의미.
+                        // resources:templates/ + {return Name}.html 을 찾아간다.
     }
 }
