@@ -15,6 +15,9 @@
 ---
 ### Build 하고 실행하는 방법 (Console)
 1. `./gradlew build`
+    - `build` directory가 생긴다.
 2. `cd build/libs`
 3. `java -jar hello-spring-0.0.1-SNAPSHOT.jar`
     - 서버 배포할때는 위 hello-spring-0.0.1-SNAPSHOT.jar 파일만 복사해서 서버에 넣어서 배포
+4. `./gradlew clean` 혹은 `./gradlew clean build`
+    - `build` directory가 다시 사라진다.
