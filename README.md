@@ -21,3 +21,19 @@
     - 서버 배포할때는 위 hello-spring-0.0.1-SNAPSHOT.jar 파일만 복사해서 서버에 넣어서 배포
 4. `./gradlew clean` 혹은 `./gradlew clean build`
     - `build` directory가 다시 사라진다.
+
+---
+
+### Web 개발의 세 가지 방법
+1. 정적 컨텐츠
+   - 서버에서 뭐 하는 거 없이 파일을 그대로 웹 브라우저에 내려줌
+   - spring Boot 는 정적 컨텐츠 기능을 자동으로 제공
+   - `/static`에서 제공한다.
+2. MVC(Model View Controller)와 Template Engine
+   - 가장 많이 하는 방법
+   - html을 서버에서 프로그래밍을 해서 html을
+      동적으로 바꿔서 내리는 것
+      -> 그걸 하기 위해서 MVC를 사용
+3. API
+   - json 이라는 데이타 구조 포맷으로 준다.
+   - 서버끼리 통신할 때! 서버끼리는 html을 내릴 필요가 없으므로

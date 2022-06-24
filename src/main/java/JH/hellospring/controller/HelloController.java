@@ -13,4 +13,5 @@ public class HelloController {
         return "hello"; // hello.html에 가서 렌더링을 하라는 의미.
                         // resources:templates/ + {return Name}.html 을 찾아간다.
     }
+
 }
