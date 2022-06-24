@@ -29,6 +29,7 @@
    - 서버에서 뭐 하는 거 없이 파일을 그대로 웹 브라우저에 내려줌
    - spring Boot 는 정적 컨텐츠 기능을 자동으로 제공
    - `/static`에서 제공한다.
+   - 스프링 부트가 Controller가 없는걸 파악하고 html 파일을 찾는다.
 2. MVC(Model View Controller)와 Template Engine
    - 가장 많이 하는 방법
    - html을 서버에서 프로그래밍을 해서 html을
