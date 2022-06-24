@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+
+<!--
+저 "hello! empty" 는 이 파일의 Absolute path를 복사 후 주소창에 치면 뜬다.
+즉, 서버 연결을 안 해도 뭔가를 볼 수 있게 해주는 것 이다.
+Template engine 으로 작동하면 저 "hello! empty"가 hello ${name} 으로 치환이 되는 것
+-->

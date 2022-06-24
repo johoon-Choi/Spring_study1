@@ -3,6 +3,7 @@ package JH.hellospring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller // Controller도 이 Notaion 꼭 필요
 public class HelloController {
@@ -14,4 +15,9 @@ public class HelloController {
                         // resources:templates/ + {return Name}.html 을 찾아간다.
     }
 
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam(value = "name") String name, Model model) { // required default 값은 true
+        model.addAttribute("name", name);
+        return "hello-template";
+    }
 }
