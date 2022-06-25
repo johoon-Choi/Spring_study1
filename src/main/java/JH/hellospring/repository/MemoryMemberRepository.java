@@ -1,10 +1,7 @@
 package JH.hellospring.repository;
 import JH.hellospring.domain.Member;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
@@ -20,17 +17,19 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findById(long id) {
-        return Optional.empty();
+        return Optional.ofNullable(store.get(id));  // NULL이 return될 수 있는 경우 NULL을 감싸준다.
     }
 
     @Override
     public Optional<Member> findByName(String name) {
-        return Optional.empty();
+        return store.values().stream()
+                .filter(member -> member.getName().equals(name))
+                .findAny(); // 끝까지 찾아본 후 없으면 Optional에 의해 NULL 반환
     }
 
     @Override
     public List<Member> findAll() {
-        return null;
+        return new ArrayList<>(store.values());
     } // interface를 implement
 
 }
