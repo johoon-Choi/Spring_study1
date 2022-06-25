@@ -21,6 +21,8 @@
     - 서버 배포할때는 위 hello-spring-0.0.1-SNAPSHOT.jar 파일만 복사해서 서버에 넣어서 배포
 4. `./gradlew clean` 혹은 `./gradlew clean build`
     - `build` directory가 다시 사라진다.
+5. Service 는 Buisness 에 의존적
+   - repository는 기계적으로 개발스럽게 용어를 선택
 
 ---
 
@@ -42,3 +44,12 @@
    - 서버끼리 통신할 때! 서버끼리는 html을 내릴 필요가 없으므로
    - json 은 `{key:value}` 와 같은 것
    - 예전에는 XML로 많이 했는데 `<HTML></HTML>` 이런식으로 열고닫기가 귀찮다.
+
+### Test시
+1. Test는 정상풀로도 중요하지만 예외풀도 중요하다
+
+### 단축키
+1. shift + F6 : 변수명 단체로 변경
+2. ctrl + alt + v : return값 파악해서 앞에 채워줌
+3. ctrl + alt + m : 해당 text를 method화
+4. ctrl + shift + t : 자동으로 Test 생성
