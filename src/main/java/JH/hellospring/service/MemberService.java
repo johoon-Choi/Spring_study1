@@ -9,7 +9,17 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();  // MemberServiceTest랑 달라서 주석처리 하고 아래처럼 해본것
+
+    private final MemberRepository memberRepository;
+
+    /**
+     * Constructor
+     * @param memberRepository
+     */
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
 
     /**

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();   // static이 아니면 DB가 다른 DB가 되면서 문제가 생긴다.
     private static long sequence = 0L;
 
     @Override

@@ -53,3 +53,4 @@
 2. ctrl + alt + v : return값 파악해서 앞에 채워줌
 3. ctrl + alt + m : 해당 text를 method화
 4. ctrl + shift + t : 자동으로 Test 생성
+5. shift + F10 : 이전 컴파일 그대로 또 컴파일

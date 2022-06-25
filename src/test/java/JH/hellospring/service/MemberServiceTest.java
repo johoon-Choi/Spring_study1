@@ -4,6 +4,7 @@ import JH.hellospring.domain.Member;
 import JH.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -12,8 +13,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+    // MemberService memberService = new MemberService();   MemberService랑 다른 레포 테스트 되고 있는 문제 수정하려고 주석처리
+
+    // MemoryMemberRepository memberRepository = new MemoryMemberRepository(); // MemberService랑 다른 레포가 테스트 되고 있는 것.
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;    // 위 문제 해결 위해서 이렇게 한 뒤 아래 beforeEach 에서 따로 정의 : Dependency Ejection
+
+    @BeforeEach
+    public void beforeEach() {
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
 
     @AfterEach
     public void afterEach() {
