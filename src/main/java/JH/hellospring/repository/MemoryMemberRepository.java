@@ -32,4 +32,7 @@ public class MemoryMemberRepository implements MemberRepository {
         return new ArrayList<>(store.values());
     } // interface를 implement
 
+    public void clearStore() {
+        store.clear();
+    }
 }
