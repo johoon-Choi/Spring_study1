@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -78,10 +79,12 @@ class MemberServiceTest {
     }
 
     @Test
-    void findMembers() {
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
     }
 
     @Test
-    void findOne() {
+    public Optional<Member> findOne(Long memberId) {
+        return memberRepository.findById(memberId);
     }
 }
